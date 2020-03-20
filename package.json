@@ -1,5 +1,5 @@
 {
-  "name": "react-redux-saga",
+  "name": "react-redux-saga-example",
   "version": "0.1.0",
   "description": "React+Redux+Saga+middleware example.",
   "private": true,
