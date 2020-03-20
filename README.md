@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# React+Redux+Saga+Middleware
+
+Пример использования React, Redux, Saga и кастомного Middleware для Redux.
+
 ## Available Scripts
 
 In the project directory, you can run:

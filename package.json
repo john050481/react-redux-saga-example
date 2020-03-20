@@ -1,6 +1,7 @@
 {
-  "name": "react-redux-sagas",
+  "name": "react-redux-saga",
   "version": "0.1.0",
+  "description": "React+Redux+Saga+middleware example.",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.1.1",
