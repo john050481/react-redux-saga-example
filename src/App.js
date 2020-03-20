@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Form from './components/Forms';
+import PostsStatic from './components/PostsStatic';
+import PostsAsync from "./components/PostsAsync";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    return (
+        <div className='container pt-3'>
+            <div className="row pb-3">
+                <div className="col border border-primary rounded">
+                    <Form />
+                </div>
+            </div>
+            <div className="row">
+                <div className="col border border-success rounded mr-1">
+                    <h2>Синхронные посты</h2>
+                    <PostsStatic />
+                </div>
+                <div className="col border border-info rounded ml-1">
+                    <h2>Асинхронные  посты</h2>
+                    <PostsAsync />
+                </div>
+            </div>
+        </div>
+    )
 }
-
-export default App;
