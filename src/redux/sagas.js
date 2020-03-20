@@ -20,7 +20,6 @@ function* sagaWorkerRequestPosts() {
         let url = `https://jsonplaceholder.typicode.com/posts?_limit=${limit}`;
         let response = yield fetch(url);
         let posts = yield response.json();
-        //console.log('limit = ', limit, 'postspostspostsposts = ', posts)
         yield put({ type: FETCH_POSTS, payload: posts })
         yield put(hideLoader())
     } catch(e) {
@@ -33,8 +32,8 @@ function* sagaLogger() {
     while (true) {
       const action = yield take('*')
       const state = yield select()
-      console.log('action', action)
-      console.log('state after', state)
+      console.log('LOGGER/action:', action)
+      console.log('LOGGER/state after:', state)
   }
 }
 
