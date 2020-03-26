@@ -1,4 +1,4 @@
-import {put, takeEvery, take, select, all} from 'redux-saga/effects'
+import {put, takeEvery, take, select, all, call} from 'redux-saga/effects'
 import {REQUEST_POSTS, FETCH_POSTS} from './types';
 import {showLoader, hideLoader, showAlert} from './actions'
 
@@ -18,8 +18,8 @@ function* sagaWorkerRequestPosts() {
         yield put(showLoader())
         let limit = randomInteger(1, 10);
         let url = `https://jsonplaceholder.typicode.com/posts?_limit=${limit}`;
-        let response = yield fetch(url);
-        let posts = yield response.json();
+        let response = yield call(fetch, url);
+        let posts = yield call(response.json.bind(response), null);
         yield put({ type: FETCH_POSTS, payload: posts })
         yield put(hideLoader())
     } catch(e) {
